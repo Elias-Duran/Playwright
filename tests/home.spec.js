@@ -16,6 +16,14 @@ test('Rindegastos Login', async ({ page }) => {
             await page.locator("//input[@id='signin_password']").fill('Usuario.02');
             await page.click(".valueButton");
             console.log('✅ Click iniciar sesion');
+            
+             // Capturar respuesta de inicio de sesión
+        const [loginResponse] = await Promise.all([
+        page.waitForResponse(res => res.url().includes('/auth/signin')),
+        page.click(".valueButton"),
+        ]);
+        console.log(`✅ Inicio de sesión - Código: ${loginResponse.status()}`);
+            
         } else {
             console.error("❌ La página se cerró antes de hacer clic");
         }
