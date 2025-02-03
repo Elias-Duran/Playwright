@@ -1,0 +1,12 @@
+[
+  {
+    "intento": 1,
+    "status": 200,
+    "timestamp": "2025-02-03T04:17:56.355Z"
+  },
+  {
+    "intento": 2,
+    "status": 200,
+    "timestamp": "2025-02-03T04:18:02.567Z"
+  }
+]
