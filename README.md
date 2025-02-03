@@ -47,7 +47,7 @@ npx playwright test home.spec.js --project=chromium --headed
 ```
 Generar reporte:
 ```sh
-npx playwright test home.spec.js --project=chromium --headed
+npx playwright show-report
 ```
 ## 📄 Formato del Informe
 El script genera un informe `login_report.json` con el resultado de cada intento de inicio de sesión. Ejemplo:
