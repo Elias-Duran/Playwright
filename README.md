@@ -65,8 +65,8 @@ El script genera un informe `login_report.json` con el resultado de cada intento
   }
 ]
 ```
-## 📢 Contribuciones
-Si desea mejorar el script, comunicar con QA Elias Duran.
+## 📢 Resultado
+Al intentar varias veces inicias sesion y cerrar, este es el resultado c:
 
 ![Mi imagen](Caso2.png)
 
