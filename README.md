@@ -2,6 +2,11 @@
 
 Este proyecto automatiza el inicio de sesión en la plataforma Rindegastos utilizando Playwright. Realiza intentos de inicio de sesión múltiples veces, captura las respuestas de la API y genera un informe con los resultados.
 
+## 🛠 Posibles Errores y Soluciones
+- **Error de Timeout**: Asegúrese de que la página se carga correctamente y ajuste los tiempos de espera (`timeout`) si es necesario.
+- **Credenciales Incorrectas**: Verifique que el usuario y la contraseña sean correctos.
+- **Bloqueo de IP**: Si se realizan muchos intentos fallidos, la plataforma podría bloquear temporalmente el acceso.
+
 ## 📌 Requisitos Previos
 
 Antes de ejecutar la prueba, asegúrese de tener instalado lo siguiente:
@@ -40,7 +45,10 @@ Para ejecutar la prueba, use el siguiente comando:
 ```sh
 npx playwright test home.spec.js --project=chromium --headed
 ```
-
+Generar reporte:
+```sh
+npx playwright test home.spec.js --project=chromium --headed
+```
 ## 📄 Formato del Informe
 El script genera un informe `login_report.json` con el resultado de cada intento de inicio de sesión. Ejemplo:
 ```json
@@ -57,16 +65,9 @@ El script genera un informe `login_report.json` con el resultado de cada intento
   }
 ]
 ```
-
-## 🛠 Posibles Errores y Soluciones
-- **Error de Timeout**: Asegúrese de que la página se carga correctamente y ajuste los tiempos de espera (`timeout`) si es necesario.
-- **Credenciales Incorrectas**: Verifique que el usuario y la contraseña sean correctos.
-- **Bloqueo de IP**: Si se realizan muchos intentos fallidos, la plataforma podría bloquear temporalmente el acceso.
-
 ## 📢 Contribuciones
-Si desea mejorar el script, puede enviar un pull request o abrir un issue con sugerencias.
+Si desea mejorar el script, comunicar con QA Elias Duran.
 
-## 📜 Licencia
-Este proyecto está bajo la licencia MIT.
+
 
 
