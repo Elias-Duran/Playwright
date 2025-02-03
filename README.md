@@ -26,7 +26,7 @@ npm install -D @playwright/test
    ```
 
 ## 📜 Descripción del Script
-El script `login.spec.js` realiza los siguientes pasos:
+El script `home.spec.js` realiza los siguientes pasos:
 
 1. Abre la página de inicio de sesión de Rindegastos.
 2. Realiza dos intentos de inicio de sesión con las credenciales proporcionadas.
@@ -38,7 +38,7 @@ El script `login.spec.js` realiza los siguientes pasos:
 ## ⚡ Ejecución de la Prueba
 Para ejecutar la prueba, use el siguiente comando:
 ```sh
-npx playwright test login.spec.js
+npx playwright test home.spec.js --project=chromium --headed
 ```
 
 ## 📄 Formato del Informe
