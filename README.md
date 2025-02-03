@@ -68,6 +68,6 @@ El script genera un informe `login_report.json` con el resultado de cada intento
 ## 📢 Contribuciones
 Si desea mejorar el script, comunicar con QA Elias Duran.
 
-![Mi imagen](https://drive.google.com/file/d/1GHEBFKa3iAetbWRYAYuvAooO5_5YJqo2/view?usp=sharing)
+![Mi imagen](Caso2.png)
 
 
