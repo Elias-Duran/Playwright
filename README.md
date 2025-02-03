@@ -2,7 +2,7 @@
 
 Este proyecto automatiza el inicio de sesión en la plataforma Rindegastos utilizando Playwright. Realiza intentos de inicio de sesión múltiples veces, captura las respuestas de la API y genera un informe con los resultados.
 
-## 🛠 Posibles Errores y Soluciones
+## 🛠 Posibles Errores y la Solucion automatizada
 - **Error de Timeout**: Asegúrese de que la página se carga correctamente y ajuste los tiempos de espera (`timeout`) si es necesario.
 - **Credenciales Incorrectas**: Verifique que el usuario y la contraseña sean correctos.
 - **Bloqueo de IP**: Si se realizan muchos intentos fallidos, la plataforma podría bloquear temporalmente el acceso.
