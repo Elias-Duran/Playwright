@@ -1,88 +1,72 @@
-# 🚀 Automatización de Inicio de Sesión con Playwright
+# Playwright - Pruebas Automatizadas de Inicio de Sesión en Rindegastos
 
-Este proyecto utiliza **Playwright** para automatizar pruebas de inicio de sesión en la plataforma **Rindegastos**.
+Este proyecto automatiza el inicio de sesión en la plataforma Rindegastos utilizando Playwright. Realiza intentos de inicio de sesión múltiples veces, captura las respuestas de la API y genera un informe con los resultados.
 
----
+## 📌 Requisitos Previos
 
-## 📌 Requisitos previos
+Antes de ejecutar la prueba, asegúrese de tener instalado lo siguiente:
 
-Antes de ejecutar el script, asegúrese de tener instalado:
+- [Node.js](https://nodejs.org/) (versión 14 o superior)
+- [Playwright](https://playwright.dev/)
 
-✅ [Node.js](https://nodejs.org/) (versión 16 o superior recomendada)\
-✅ [Playwright](https://playwright.dev/)
-
----
-
-## 📥 Instalación
-
-1️⃣ Clone este repositorio en su máquina local:
-
+Si Playwright no está instalado, puede hacerlo con el siguiente comando:
 ```sh
-git clone https://github.com/tu-repositorio/playwright-login.git
-cd playwright-login
+npm install -D @playwright/test
 ```
 
-2️⃣ Instale las dependencias necesarias:
+## 🚀 Instalación y Configuración
+1. Clone este repositorio o copie el código en su entorno de trabajo.
+2. Instale las dependencias necesarias ejecutando:
+   ```sh
+   npm install
+   ```
+3. Asegúrese de que Playwright tenga los navegadores requeridos:
+   ```sh
+   npx playwright install
+   ```
 
-```sh
-npm install
-```
+## 📜 Descripción del Script
+El script `login.spec.js` realiza los siguientes pasos:
 
-3️⃣ Instale los navegadores compatibles con Playwright:
+1. Abre la página de inicio de sesión de Rindegastos.
+2. Realiza dos intentos de inicio de sesión con las credenciales proporcionadas.
+3. Captura la respuesta de la API tras el intento de inicio de sesión.
+4. Si la autenticación es exitosa, espera la carga de la página.
+5. Accede al menú y cierra la sesión.
+6. Registra los resultados en un archivo `login_report.json`.
 
-```sh
-npx playwright install
-```
-
----
-
-## ▶️ Ejecución de las pruebas
-
-Para ejecutar la prueba automatizada de inicio de sesión, utilice el siguiente comando:
-
+## ⚡ Ejecución de la Prueba
+Para ejecutar la prueba, use el siguiente comando:
 ```sh
 npx playwright test login.spec.js
 ```
 
----
-
-## 📝 Descripción del script
-
-El script realiza las siguientes acciones:
-
-1️⃣ Accede a la página de inicio de sesión de **Rindegastos**.\
-2️⃣ Ingresa las credenciales de usuario.\
-3️⃣ Realiza múltiples intentos de inicio de sesión (según configuración).\
-4️⃣ Verifica la carga completa de la página.\
-5️⃣ Cierra sesión y repite el proceso.\
-6️⃣ Registra la actividad en la consola.
-
----
-
-## ⚙️ Personalización
-
-🔹 Puede modificar la variable `intentos` en el script para ajustar el número de repeticiones.\
-🔹 Para cambiar las credenciales de usuario, edite el archivo `login.spec.js` en las líneas correspondientes.
-
----
-
-## 📊 Reporte de pruebas
-
-El informe de pruebas se puede generar con el siguiente comando:
-
-```sh
-npx playwright test --reporter=html
+## 📄 Formato del Informe
+El script genera un informe `login_report.json` con el resultado de cada intento de inicio de sesión. Ejemplo:
+```json
+[
+  {
+    "intento": 1,
+    "status": 200,
+    "timestamp": "2025-02-01T12:00:00Z"
+  },
+  {
+    "intento": 2,
+    "status": 401,
+    "timestamp": "2025-02-01T12:01:00Z"
+  }
+]
 ```
 
-Este comando generará un informe detallado en formato **HTML** en la carpeta `playwright-report/`.
+## 🛠 Posibles Errores y Soluciones
+- **Error de Timeout**: Asegúrese de que la página se carga correctamente y ajuste los tiempos de espera (`timeout`) si es necesario.
+- **Credenciales Incorrectas**: Verifique que el usuario y la contraseña sean correctos.
+- **Bloqueo de IP**: Si se realizan muchos intentos fallidos, la plataforma podría bloquear temporalmente el acceso.
 
----
+## 📢 Contribuciones
+Si desea mejorar el script, puede enviar un pull request o abrir un issue con sugerencias.
 
-## 📞 Contacto
+## 📜 Licencia
+Este proyecto está bajo la licencia MIT.
 
-📧 Para cualquier consulta o mejora del proyecto, comuníquese con el equipo de QA.
-
----
-
-✨ **© 2025 - Empresa QA Automation** ✨
 
