@@ -66,7 +66,7 @@ El script genera un informe `login_report.json` con el resultado de cada intento
 ]
 ```
 ## 📢 Resultado
-Al intentar varias veces inicias sesion y cerrar, este es el resultado c:
+Al intentar varias veces inicias sesion y cerrar, este es el resultado 😊😄 gracias.
 
 ![Mi imagen](Caso2.png)
 
